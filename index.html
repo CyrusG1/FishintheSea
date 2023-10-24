@@ -129,21 +129,7 @@
 
           <input type="submit" value="Sign Up">
           </form>
-          <script src="https://smtpjs.com/v3/smtp.js"></script>
-          <script>
-          function sendemail(){
-            Email.send({
-                        Host: "smtp.gmail.com",
-                        Username: "cgorji19@gmail.com",
-                        Password: "password",
-                        To: 'cgorji19@gmail.com',
-                        From: document.getElementbyID("email").value,
-                        Subject: "Signed up for FishintheSea",
-                        Body: "Hey there, you're looking real cute :3"
-                      }).then(message => alert(message));
-                    );
-                  }
-                    </script>
+         
             <br> </br>
             <p>Welcome to FishintheSea – your ultimate destination for job hunting success. In a sea of job options, we are your guiding star, helping you navigate the waters to find the perfect job opportunity.</p>
 
@@ -207,8 +193,21 @@
             </form>
         </div>
 
-
-      <script src= "/validation.js"></script> <!-- Updated path to validation.js -->
+ <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+          function sendemail(){
+            Email.send({
+                        Host: "smtp.gmail.com",
+                        Username: "cgorji19@gmail.com",
+                        Password: "password",
+                        To: 'cgorji19@gmail.com',
+                        From: document.getElementbyID("email").value,
+                        Subject: "Signed up for FishintheSea",
+                        Body: "Hey there, you're looking real cute :3"
+                      }).then(message => alert(message));
+                    );
+                  }
+                    </script>
 
         <footer>
             Made by Cyrus Gorji
