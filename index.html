@@ -6,7 +6,7 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: "Kiwi Maru", sans-serif;
+        font-family: Kiwi Maru;
         background: linear-gradient(lightblue, white);
     }
 
@@ -15,7 +15,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center; /* Center content horizontally */
     }
 
     .content {
@@ -29,8 +28,7 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-        max-width: 300px;
-        width: 100%;
+        width: 300px;
     }
 
     .contact-form label,
@@ -57,106 +55,148 @@
         padding: 10px 0;
     }
 
-    /* Dropdown styles */
-    .dropbtn {
-        background-color: lightblue;
-        color: white;
-        padding: 14px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-    }
+    /* Style the dropdown button */
+.dropbtn {
+  background-color: lightblue ;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: lightblue;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    .dropdown-content a:hover {
-        background-color: lightblue;
-    }
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightblue;
+}
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-    .dropdown:hover .dropbtn {
-        background-color: lightblue;
-    }
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+        /* Your CSS styles here */
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <img src="FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo">
-            <br><br>
+          <div class="content">
+            <img src="C:\Users\cgorj\Documents\FishintheSea\FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center">
+            <br> </br>
+
             <h1>Welcome to FishintheSea</h1>
             <p>Already have an account? <a href="FishintheSea Signin Page.html">Log In</a></p>
             <p>Don't have an account yet? <a href="FishintheSea Sign Up.html">Sign Up</a></p>
             <h1>Upload Resume Here</h1>
             <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
-                <label for="resumeUpload">Choose a file:</label>
-                <input type="file" name="resumeUpload" id="resumeUpload">
-                <input type="submit" value="Upload">
-            </form>
-            <h1>Sign Up for Email Updates</h1>
-            <form id="emailForm" onsubmit="sendemail(); return false;">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-                <input type="submit" value="Sign Up">
-            </form>
-            <br>
+            <label for="resumeUpload">Choose a file:</label>
+            <input type="file" name="resumeUpload" id="resumeUpload">
+            <input type="submit" value="Upload">
+          </form>
+          <h1>Sign Up for Email Updates</h1>
+          <form action="https://formsubmit.co/cgorji19@email.com" method="POST">
+     <input type="email" name="email" required>
+     <button type="submit">Send</button>
+</form>
+
+
+            <br> </br>
             <p>Welcome to FishintheSea – your ultimate destination for job hunting success. In a sea of job options, we are your guiding star, helping you navigate the waters to find the perfect job opportunity.</p>
+
+            <br></br>
+
+            <h2> Why Us? </h2>
+
+            <br> Diverse Listings: Discover a broad range of job opportunities to suit your unique skills and aspirations. </br>
+
+            <br> Easy Navigation: Our user-friendly platform makes job searching a breeze, with efficient search tools and filters.<br>
+
+            <br> Community & Resources: Connect with like-minded professionals, access expert career advice, and make your journey smoother. </br>
+
+            <br> Advanced Technology: Benefit from cutting-edge AI matching for an effective job search. </br>
+
+            <br> Your dream job is just a click away. Join FishintheSea and let's navigate your career journey together! Start your search today.  </br>
+
             <br>
-            <h2>Why Us?</h2>
-            <br>
-            <p>Diverse Listings: Discover a broad range of job opportunities to suit your unique skills and aspirations.</p>
-            <p>Easy Navigation: Our user-friendly platform makes job searching a breeze, with efficient search tools and filters.</p>
-            <p>Community & Resources: Connect with like-minded professionals, access expert career advice, and make your journey smoother.</p>
-            <p>Advanced Technology: Benefit from cutting-edge AI matching for an effective job search.</p>
-            <p>Your dream job is just a click away. Join FishintheSea and let's navigate your career journey together! Start your search today.</p>
-            <img src="Fish.jpg" width="300" height="300" alt="Fish Swimming">
-            <br>
-            <h2>Categories</h2>
+          </br>
+
+
+            <img src="C:\Users\cgorj\Documents\FishintheSea\Fish.jpg" width="300" height="300" alt="Fish Swimming" style="center"> <br>
+            <h2> Catergories </h2>
+
             <a href="categories.html">Click Here</a>
-            <br>
-            <div class="dropdown">
-                <button class="dropbtn">Recommended Jobs for Newcomers</button>
-                <div class="dropdown-content" id="myDropdown">
-                    <a href="#">Job Description 1</a>
-                    <a href="#">Job Description 2</a>
-                    <a href="#">Job Description 3</a>
-                </div>
-            </div>
-        </div>
+
+            <br></br>
+
+
+      <div class="dropdown">
+      <button class="dropbtn">Recomended Jobs for NewComers</button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="#">Job Description 1</a>
+        <a href="#">Job Description 2</a>
+        <a href="#">Job Description 3</a>
+      </div>
+    </div>
+
+            <br></br>
+
+
+
         <div class="contact-form">
-                <h2>Contact Us</h2>
-                <form id="contactForm" action="send_email.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+            <h2>Contact Us</h2><br>
+            <form id="contactForm" action="process_form.php" method="post">
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
 
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+
+                  <button type="submit">Submit</button>
+              </form>
+                <!-- Your form inputs here -->
+                <!-- ... (same as your previous code) ... -->
+            </form>
+        </div>
+
+
+
+        <footer>
+            Made by Cyrus Gorji
+        </footer>
+    </div>
+</body>
+</html>
