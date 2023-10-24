@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Application - JD Retail Assistant</title>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Kiwi Maru;
+    background: linear-gradient(lightblue, white);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    margin: 0 auto 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="submit"] {
+    background-color: lightblue;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    width: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: lightblue;
+    color: white;
+    padding: 10px 0;
+}
+
+
+
+    /* Your CSS styles here */
+</style>
+</head>
+<body>
+<body>
+  <div class="container">
+        <div class="content">
+          <img src="C:\Users\cgorj\Documents\FishintheSea\FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center">
+          <br> </br>
+  <h1>Apply for the Position of JD Retail Assistant</h1>
+
+  <form action="submit_application.php" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <label for="resume">Resume (PDF or Word document):</label>
+    <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br>
+
+    <label for="availability">Availability:</label>
+    <textarea id="availability" name="availability" required></textarea><br>
+
+    <label for="experience">Relevant Experience:</label>
+    <textarea id="experience" name="experience" required></textarea><br>
+
+    <label for="references">References:</label>
+    <textarea id="references" name="references" required></textarea><br>
+
+    <input type="submit" value="Submit Application">
+  </form>
+</body>
+</html>
