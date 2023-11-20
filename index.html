@@ -10,6 +10,47 @@
         background: linear-gradient(lightblue, white);
     }
 
+    nav {
+        background-color: lightblue;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        text-align: center; 
+
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        margin-right: 20px;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+
+    /* Change the color when hovering over a link */
+    a:hover {
+        background-color: #555;
+    }
+
+    /* Add some padding to the content to prevent it from being hidden behind the fixed navigation */
+    .content {
+        padding-top: 60px; /* Adjust the padding value based on the height of your navigation bar */
+    }
+
     .container {
         min-height: 100vh;
         display: flex;
@@ -55,7 +96,7 @@
         padding: 10px 0;
     }
 
-
+    /* Style the dropdown button */
 .dropbtn {
   background-color: lightblue ;
   color: white;
@@ -65,6 +106,7 @@
   cursor: pointer;
 }
 
+/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -103,28 +145,34 @@
   background-color: lightblue;
 }
 
+        /* Your CSS styles here */
     </style>
 </head>
 <body>
+  <nav>
+      <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Catergories">Catergories</a></li>
+          <li><a href="#Contact">Contact</a></li>
+      </ul>
+  </nav>
     <div class="container">
           <div class="content">
-            <a href="index.html">
-            <img src="FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center"> </a>
-             
-
+            <img src="C:\Users\cgorj\Documents\FishintheSea\FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center">
             <br> </br>
 
+            <div id = "Home">
             <h1>Welcome to FishintheSea</h1>
             <p>Already have an account? <a href="FishintheSea Signin Page.html">Log In</a></p>
             <p>Don't have an account yet? <a href="FishintheSea Sign Up.html">Sign Up</a></p>
             <h1>Upload Resume Here</h1>
-            <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+            <form id="uploadForm" action="Upload Success.html" method="post" enctype="multipart/form-data">
             <label for="resumeUpload">Choose a file:</label>
             <input type="file" name="resumeUpload" id="resumeUpload">
             <input type="submit" value="Upload">
           </form>
           <h1>Sign Up for Email Updates</h1>
-          <form action="https://formsubmit.co/cgorji19@gmail.com" method="POST">
+          <form action="https://formsubmit.co/cgorji19@email.com" method="POST">
      <input type="email" name="email" required>
      <button type="submit">Send</button>
 </form>
@@ -151,11 +199,11 @@
           </br>
 
 
-            <img src="Fish.jpg" width="300" height="300" alt="Fish Swimming" style="center"> <br>
+            <img src="C:\Users\cgorj\Documents\FishintheSea\Fish.jpg" width="300" height="300" alt="Fish Swimming" style="center"> <br>
+            <div id="Catergories">
             <h2> Catergories </h2>
 
-            <p> <a href="FishintheSea Catergories.html">Click Here</a></p>
-
+            <a href="categories.html">Click Here</a>
 
             <br></br>
 
@@ -163,16 +211,16 @@
       <div class="dropdown">
       <button class="dropbtn">Recomended Jobs for NewComers</button>
       <div class="dropdown-content" id="myDropdown">
-        <a href="Job Application form1.html">Job Description 1</a>
-        <a href="Job Application Form2.html">Job Description 2</a>
-        <a href="Job Application Form3.html">Job Description 3</a>
+        <a href="#">Job Description 1</a>
+        <a href="#">Job Description 2</a>
+        <a href="#">Job Description 3</a>
       </div>
     </div>
 
             <br></br>
 
 
-
+        <div id="Contact">
         <div class="contact-form">
             <h2>Contact Us</h2><br>
             <form id="contactForm" action="process_form.php" method="post">
