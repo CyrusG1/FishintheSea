@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishintheSea Employer Dashboard</title>
+    <style>
+    body {
+        font-family: Kiwi Maru;
+        margin: 20px;
+        text-align: center; /* Center text globally */
+        background: linear-gradient(lightblue, white);
+    }
+
+        header {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: lightblue;
+        }
+
+        p {
+            line-height: 1.6;
+            color:lightblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: lightblue;
+            color: #fff;
+        }
+
+        footer {
+            background-color: white;
+            color: lightblue;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Employer Dashboard </h1>
+    </header>
+
+    <section>
+        <h2>Job Applications</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Applicant Name</th>
+                    <th>Position</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="applicationsTableBody">
+                <!-- Application data will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Business Information</h2>
+        <p>
+            Here you can view important information about your business.
+            Customize this section based on your specific business details.
+        </p>
+    </section>
+
+    <footer>
+        &copy; 2023 Awesome Company. All rights reserved.
+    </footer>
+
+    <script>
+        // Sample data for job applications
+        const jobApplications = [
+            { name: "John Doe", position: "Software Developer", status: "In Progress" },
+            { name: "Jane Smith", position: "UX Designer", status: "Accepted" },
+            // Add more applications as needed
+        ];
+
+        // Function to populate the applications table
+        function populateApplicationsTable() {
+            const tableBody = document.getElementById("applicationsTableBody");
+
+            jobApplications.forEach(application => {
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${application.name}</td>
+                                <td>${application.position}</td>
+                                <td>${application.status}</td>`;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to populate the table on page load
+        window.onload = populateApplicationsTable;
+    </script>
+
+</body>
+</html>
