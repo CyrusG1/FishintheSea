@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FishintheSea JobBoard</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Kiwi Maru;
+        background: linear-gradient(lightblue, white);
+    }
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        margin-right: 20px;
+    }
+
+    a {
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+
+    /* Change the color when hovering over a link */
+    a:hover {
+        background-color: #555;
+    }
+
+    /* Add some padding to the content to prevent it from being hidden behind the fixed navigation */
+    .content {
+        padding-top: 60px; /* Adjust the padding value based on the height of your navigation bar */
+    }
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .job {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-form {
+        margin: 0 auto 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        width: 300px;
+    }
+
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+    .contact-form button {
+        width: auto;
+    }
+
+    footer {
+        text-align: center;
+        background-color: lightblue;
+        color: white;
+        padding: 10px 0;
+    }
+
+    /* Style the dropdown button */
+.dropbtn {
+  background-color: lightblue ;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightblue;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: lightblue;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+
+              <div class="container">
+                  <div class="job">
+            <img src="C:\Users\cgorj\Documents\FishintheSea\FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center">
+            <br> </br>
+
+            <div id = "Home">
+            <h1>JobBoard</h1>
+
+                    <h2>Software Engineer</h2>
+                    <p>Company: XYZ Tech</p>
+                    <p>Location: Melbourne, Victoria</p>
+                    <p>Description: We are looking for a talented software engineer to join our team...</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job">
+                    <h2>Graphic Designer</h2>
+                    <p>Company: ABC Designs</p>
+                    <p>Location: Melbourne, Victoria</p>
+                    <p>Description: ABC Designs is seeking a creative graphic designer to...</p>
+                    <button>Apply</button>
+                </div>
+                <!-- Add more job listings here -->
+                <h2>Marketing Specialist</h2>
+          <p>Company: Marketing Co.</p>
+          <p>Location:  Melbourne, Victoria</p>
+          <p>Description: Marketing Co. is looking for a skilled marketing specialist...</p>
+          <button>Apply</button>
+            </div>
+            </div>
+
+        <footer>
+            Made by Cyrus Gorji
+        </footer>
+    </div>
+</body>
+</html>
