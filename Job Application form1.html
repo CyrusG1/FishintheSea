@@ -1,114 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Job Application - McDonald's Staff Member</title>
-</head>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Kiwi Maru;
-    background: linear-gradient(lightblue, white);
-}
-
-.container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.content {
-    text-align: center;
-    padding: 20px;
-}
-
-form {
-    margin: 0 auto 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    width: 300px;
-}
-
-form label,
-form input,
-form textarea,
-form button {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-}
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  input[type="submit"] {
-    background-color: lightblue;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-
-form textarea {
-    resize: vertical;
-}
-
-form button {
-    width: auto;
-}
-
-footer {
-    text-align: center;
-    background-color: lightblue;
-    color: white;
-    padding: 10px 0;
-}
-
-
-
-    /* Your CSS styles here */
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+          font-family: Kiwi Maru;
+          background: linear-gradient(lightblue, white);
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align everything */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .job {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            text-align: left; /* Reset text alignment for job listings */
+        }
+        .job h2 {
+            margin-top: 0;
+        }
+        .job p {
+            margin-bottom: 5px;
+        }
+        .job button {
+            background-color: #000080;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .job button:hover {
+            background-color: #000080;
+        }
+        .apply-form {
+            margin-top: 20px; /* Add margin for separation */
+        }
+        .apply-form input[type="text"],
+        .apply-form input[type="email"],
+        .apply-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .apply-form label {
+            font-weight: bold;
+        }
+        .apply-form button {
+            background-color: #000080;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .apply-form button:hover {
+            background-color: #000080;
+        }
+    </style>
 </head>
 <body>
-<body>
-  <div class="container">
-        <div class="content">
-           <a href="index.html">
-          <img src="FishintheSea1 Logo.png" width="300" height="300" alt="FishintheSea Logo" style="center"> </a>
-          <br> </br>
-  <h1>Apply for the Position of McDonald's Staff Member</h1>
 
-  <form action="submit_application.php" method="post">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required><br>
+<div class="container">
+    <div class="job">
+        <h2>Apply for the Position of McDonald's Staff Member</h2>
+        <p>Company: Mcdonalds</p>
+        <p>Location: Melbourne, Victoria</p>
+        <p>Description: We are looking for workers...</p>
+        <button onclick="showForm('Software Engineer')">Apply</button>
+    </div>
+    <div id="applyForm" style="display: none;">
+        <h2>Work for Mcdonalds</h2>
+        <label for="video">Video(Video of Mcdonalds introduction will be displayed here):</label>
+        <input type="file" id="video" name="video" accept="video/*"><br>
+        <form class="apply-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required><br>
+            <label for="resume">Resume (PDF or Word):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br>
 
-    <label for="resume">Resume (PDF or Word document):</label>
-    <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br>
 
-    <label for="availability">Availability:</label>
-    <textarea id="availability" name="availability" required></textarea><br>
 
-    <label for="experience">Relevant Experience:</label>
-    <textarea id="experience" name="experience" required></textarea><br>
+          <br> </br>  <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</div>
 
-    <label for="references">References:</label>
-    <textarea id="references" name="references" required></textarea><br>
+<script>
+    function showForm(jobTitle) {
+        var applyForm = document.getElementById('applyForm');
+        applyForm.style.display = 'block';
+    }
+</script>
 
-    <input type="submit" value="Submit Application">
-  </form>
 </body>
 </html>
